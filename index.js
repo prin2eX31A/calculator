@@ -27,15 +27,15 @@ function backSpace(){
 
 function appendPercentToDisplay(){
     let num = 0;
-    const reLastNumeric = /(\d+(\.\d*)?)$/;
-    //match \d = digits or \d+\.\d = decimal; ? with $ means the shortest answer starting from the end of the string
+    const reLastNumeric = /(\d+(\.\d*)?)$/;  //match \d = digits or \d+\.\d = decimal; ? with $ means the shortest answer starting from the end of the string
 
     //using match function to get the number in string format
     const numstr = display.value.match(reLastNumeric);
 
     if (numstr){
-        //
+        //change string into float times 100%
         num = parseFloat(numstr)*0.01;
+        //change num back to string and replace the RE matched slice
         display.value = display.value.replace(reLastNumeric, String(num));
     }else{
         display.value = 'Error';
