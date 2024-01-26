@@ -1,2 +1,2 @@
-# calculator
-A front-end project for Master degree
+# Alex's Calculator
+A simple front-end project for my Master's degree
